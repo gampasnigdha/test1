@@ -1,17 +1,20 @@
 #######################
-# Jenkins Build Options
+# Aurea Central Jervis
 #######################
-# User guide for this file: https://github.com/samrocketman/jervis/wiki/User-Guide
+# User guide and documentation can be found at: https://github.com/trilogy-group/central-jervis
+# This project is based on https://github.com/samrocketman/jervis
 
-language: groovy
+language: shell
 
-#build library
-#gradle doesn't have a retry for assembling dependencies so here's one in bash
+env:
+  - TEST="test1"
+script: 
+  - echo "Hello World."
 
-#branches:
-#  only:
-#    - master
-#    - jervis_simple
-
-#jenkins:
-#  pipeline_jenkinsfile: assets/Jenkinsfile
+jenkins:
+  pipeline_jenkinsfile: Jenkinsfile
+  collect: []
+  
+branches:
+  only:
+  - master
