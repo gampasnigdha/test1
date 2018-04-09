@@ -1,0 +1,17 @@
+#######################
+# Jenkins Build Options
+#######################
+# User guide for this file: https://github.com/samrocketman/jervis/wiki/User-Guide
+
+language: groovy
+
+#build library
+#gradle doesn't have a retry for assembling dependencies so here's one in bash
+
+#branches:
+#  only:
+#    - master
+#    - jervis_simple
+
+#jenkins:
+#  pipeline_jenkinsfile: assets/Jenkinsfile
