@@ -13,7 +13,8 @@ script:
 
 jenkins:
   pipeline_jenkinsfile: Jenkinsfile
-  collect:
+ collect:
+   collect:
      artifacts: build/*.log
   
 branches:
