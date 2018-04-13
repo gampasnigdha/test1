@@ -5,6 +5,8 @@
 # This project is based on https://github.com/samrocketman/jervis
 
 language: shell
+script: 
+  - before_install: chmod a+x
 
 env:
   - TEST="test1"
@@ -17,3 +19,7 @@ jenkins:
 branches:
   only:
   - master
+  
+collect:
+   collect :
+     artifacts: build/*.log  
