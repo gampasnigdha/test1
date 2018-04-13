@@ -4,7 +4,9 @@ pipeline {
            DOCKER_TLS_VERIFY='1'
            DOCKER_CERT_PATH='/opt/.docker/'
    }
-  agent any
+  agent {
+       label 'ubuntu1604'
+  }
    stages {
        stage("run_test") {
            steps {
