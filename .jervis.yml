@@ -13,13 +13,14 @@ env:
 script: 
   - echo "Hello World."
 
-jenkins:
-  pipeline_jenkinsfile: Jenkinsfile
-  
 branches:
   only:
-  - master
-  
-collect:
-   collect :
-     artifacts: build/*.log  
+    - master
+    - jervis_simple
+
+jenkins:
+  pipeline_jenkinsfile: Jenkinsfile
+  collect:
+    collect: 
+      artifacts: build/libs/*.jar
+      junit: build/test-results/*.xml
